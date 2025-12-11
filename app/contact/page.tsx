@@ -74,7 +74,7 @@ export default function ContactPage() {
                 />
                 <textarea
                   placeholder="咨询内容"
-                  rows="4"
+                  rows={4}
                   className="w-full p-3 rounded bg-white border border-slate-200 focus:border-blue-500 outline-none transition-colors"
                 ></textarea>
                 <button className="w-full bg-slate-900 text-white py-3 rounded font-bold hover:bg-slate-800 transition-colors">
