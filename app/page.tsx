@@ -40,7 +40,6 @@ export default function HomePage() {
       desc: "ISO9001认证，严格的每批次质检溯源",
     },
   ];
-
   // 动态加载图标组件
   const getIcon = (iconName: string) => {
     const icons: { [key: string]: React.ReactNode } = {

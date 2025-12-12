@@ -15,36 +15,45 @@ import {
 const DEMO_PRODUCTS = [
   {
     id: 1,
-    name: "叔碳酸乙烯酯",
-    enName: "Versatic Acid Vinyl Ester",
+    name: "新癸酸乙烯酯 (W10)",
+    // 修正：从 Neononanoate (C9) 改为 Neodecanoate (C10)
+    enName: "Vinyl Neodecanoate (W10)",
     // 图片：蓝色实验室烧杯，代表化学合成
     image: "/image/unnamed.jpg",
-    desc: "优异的耐水解性和耐候性，广泛用于高档乳胶漆及工业涂料的改性。",
-    features: ["极佳耐候性", "高疏水性", "抗紫外线"],
-    applications: ["外墙涂料", "木器漆", "金属防护"],
+    // 优化：强调单体改性和耐受性
+    desc: "作为共聚单体，能显著提升聚合物乳液的耐水解性、耐擦洗性及耐候性。",
+    features: ["极佳耐候性", "优异疏水性", "耐化学品腐蚀"],
+    applications: ["环保乳胶漆", "外墙涂料", "防水涂层"],
     icon: "Beaker",
+    code: "W10",
   },
   {
     id: 2,
-    name: "特种环氧单体",
-    enName: "Specialty Epoxy Monomers",
+    name: "新癸酸缩水甘油酯 (F10)",
+    // 修正：从 Neononanoate 改为 Neodecanoate
+    enName: "Glycidyl Neodecanoate (F10)",
     // 图片：微观结构/晶体，代表高分子材料
     image: "/image/unnamed (1).jpg",
-    desc: "用于提升环氧树脂体系的柔韧性与粘接强度，降低体系粘度。",
-    features: ["低粘度", "增韧效果好", "反应活性高"],
-    applications: ["地坪涂料", "电子灌封", "胶粘剂"],
+    // 优化：强调其作为“活性稀释剂”的核心功能
+    desc: "一种用于高性能环氧树脂的活性稀释剂，可有效降低粘度并提升漆膜的丰满度与柔韧性。",
+    features: ["低粘度", "高反应活性", "优良的流平性"],
+    applications: ["汽车修补漆", "工业地坪", "电子灌封胶"],
     icon: "FlaskConical",
+    code: "F10",
   },
   {
     id: 3,
-    name: "功能性助剂",
-    enName: "Functional Additives",
+    name: "新癸酸 (A10)",
+    // 修正：从 Neononanoic 改为 Neodecanoic
+    enName: "Neodecanoic Acid (A10)",
     // 图片：工业表面/涂层，代表应用场景
     image: "/image/unnamed (2).jpg",
-    desc: "增强涂层的附着力与防腐性能，适用于严苛的工业环境。",
-    features: ["耐盐雾", "附着力强", "环保低VOC"],
-    applications: ["船舶涂料", "集装箱涂料", "重防腐"],
+    // 优化：强调其作为中间体和金属盐合成的用途
+    desc: "多功能的羧酸中间体，具有高位阻结构，广泛用于合成金属盐、附着力促进剂及过氧化物。",
+    features: ["高化学稳定性", "优异的溶解性", "抗氧化性"],
+    applications: ["轮胎橡胶粘合", "金属萃取", "涂料催干剂"],
     icon: "ShieldCheck",
+    code: "A10",
   },
 ];
 
@@ -161,16 +170,92 @@ export default function ProductsPage() {
                 </div>
 
                 {/* 底部按钮区 */}
-                <div className="pt-6 border-t border-slate-50 flex flex-wrap gap-4">
-                  <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-50 text-blue-700 font-semibold text-sm hover:bg-blue-100 transition-colors">
-                    <Download size={16} />
-                    下载 TDS
-                  </button>
-                  <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 text-slate-700 font-semibold text-sm hover:bg-slate-100 transition-colors">
-                    <Download size={16} />
-                    下载 MSDS
-                  </button>
-                  <button className="ml-auto flex items-center gap-1 text-slate-400 hover:text-blue-600 text-sm font-medium transition-colors">
+                <div className="pt-6 border-t border-slate-50">
+                  <div className="mb-4">
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                      产品文档下载
+                    </span>
+                  </div>
+
+                  {/* 文档类型分组 */}
+                  <div className="grid grid-cols-1 gap-4 mb-4">
+                    {/* DATA 文档 */}
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-sm font-medium text-slate-600 self-center pr-2">
+                        DATA:
+                      </span>
+                      <a
+                        href={`/pdf/${product.code} DATA(CN).pdf`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-blue-50 text-blue-700 font-medium text-xs hover:bg-blue-100 transition-colors"
+                      >
+                        <Download size={14} />
+                        中文版
+                      </a>
+                      <a
+                        href={`/pdf/${product.code} DATA(EN).pdf`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-slate-50 text-slate-700 font-medium text-xs hover:bg-slate-100 transition-colors"
+                      >
+                        <Download size={14} />
+                        English
+                      </a>
+                    </div>
+
+                    {/* TDS 文档 */}
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-sm font-medium text-slate-600 self-center pr-2">
+                        TDS:
+                      </span>
+                      <a
+                        href={`/pdf/${product.code} TDS(CN).pdf`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-blue-50 text-blue-700 font-medium text-xs hover:bg-blue-100 transition-colors"
+                      >
+                        <Download size={14} />
+                        中文版
+                      </a>
+                      <a
+                        href={`/pdf/${product.code} TDS(EN).pdf`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-slate-50 text-slate-700 font-medium text-xs hover:bg-slate-100 transition-colors"
+                      >
+                        <Download size={14} />
+                        English
+                      </a>
+                    </div>
+
+                    {/* MSDS 文档 */}
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-sm font-medium text-slate-600 self-center pr-2">
+                        MSDS:
+                      </span>
+                      <a
+                        href={`/pdf/${product.code} MSDS(CN).pdf`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-blue-50 text-blue-700 font-medium text-xs hover:bg-blue-100 transition-colors"
+                      >
+                        <Download size={14} />
+                        中文版
+                      </a>
+                      <a
+                        href={`/pdf/${product.code} MSDS(EN).pdf`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-slate-50 text-slate-700 font-medium text-xs hover:bg-slate-100 transition-colors"
+                      >
+                        <Download size={14} />
+                        English
+                      </a>
+                    </div>
+                  </div>
+
+                  <button className="flex items-center gap-1 text-slate-400 hover:text-blue-600 text-sm font-medium transition-colors mt-4">
                     详情
                     <ArrowRight size={16} />
                   </button>

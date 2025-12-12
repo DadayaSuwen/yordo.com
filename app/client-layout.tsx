@@ -155,7 +155,7 @@ export default function ClientLayout({
               <span className="text-white font-bold text-xl">元道分子</span>
             </div>
             <p className="text-sm leading-relaxed mb-6">
-              以分子科技为核心，致力于精细化学品的绿色合成与应用创新。
+              以分子科技为核心，致力于精细化学品应用创新。
             </p>
             <div className="flex gap-4">
               {/* 社交图标占位 */}
