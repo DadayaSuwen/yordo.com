@@ -165,11 +165,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 reveal-on-scroll">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              核心产品体系
+              叔碳衍生物核心体系
             </h2>
             <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
             <p className="text-slate-500 max-w-2xl mx-auto">
-              依托自主知识产权的羰基化合成技术，我们为全球客户提供具有竞争力的精细化学品。
+              依托自主知识产权的羰基化合成平台，重新定义涂料与树脂的高性能标准，
+              为全球合作伙伴提供卓越的精细化工解决方案。
             </p>
           </div>
 
