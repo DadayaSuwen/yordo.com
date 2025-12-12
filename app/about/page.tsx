@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[url('/yordo.png')] bg-cover bg-center opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in-up">
-            关于元道化学
+            关于元道分子
           </h1>
           <p className="text-xl text-blue-200 max-w-3xl mx-auto animate-fade-in-up delay-100">
             致力于精细化工领域的持续创新，做全球值得信赖的合作伙伴

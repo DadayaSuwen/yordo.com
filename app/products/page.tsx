@@ -18,8 +18,7 @@ const DEMO_PRODUCTS = [
     name: "叔碳酸乙烯酯",
     enName: "Versatic Acid Vinyl Ester",
     // 图片：蓝色实验室烧杯，代表化学合成
-    image:
-      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80",
+    image: "/image/unnamed.jpg",
     desc: "优异的耐水解性和耐候性，广泛用于高档乳胶漆及工业涂料的改性。",
     features: ["极佳耐候性", "高疏水性", "抗紫外线"],
     applications: ["外墙涂料", "木器漆", "金属防护"],
@@ -30,8 +29,7 @@ const DEMO_PRODUCTS = [
     name: "特种环氧单体",
     enName: "Specialty Epoxy Monomers",
     // 图片：微观结构/晶体，代表高分子材料
-    image:
-      "https://images.unsplash.com/photo-1629813958992-d336a589253d?auto=format&fit=crop&w=800&q=80",
+    image: "/image/unnamed (1).jpg",
     desc: "用于提升环氧树脂体系的柔韧性与粘接强度，降低体系粘度。",
     features: ["低粘度", "增韧效果好", "反应活性高"],
     applications: ["地坪涂料", "电子灌封", "胶粘剂"],
@@ -42,8 +40,7 @@ const DEMO_PRODUCTS = [
     name: "功能性助剂",
     enName: "Functional Additives",
     // 图片：工业表面/涂层，代表应用场景
-    image:
-      "https://images.unsplash.com/photo-1615359489431-155e9c0c885c?auto=format&fit=crop&w=800&q=80",
+    image: "/image/unnamed (2).jpg",
     desc: "增强涂层的附着力与防腐性能，适用于严苛的工业环境。",
     features: ["耐盐雾", "附着力强", "环保低VOC"],
     applications: ["船舶涂料", "集装箱涂料", "重防腐"],

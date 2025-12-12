@@ -240,7 +240,7 @@ export default function HomePage() {
             了解我们的应用案例
           </h2>
           <p className="text-blue-100 max-w-2xl mx-auto mb-10 text-lg">
-            看看元道化学的产品如何助力各行业客户提升产品性能。
+            看看元道分子的产品如何助力各行业客户提升产品性能。
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

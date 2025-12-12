@@ -1,6 +1,6 @@
 export const COMPANY_DATA = {
   name: "江西元道分子化学股份有限公司",
-  shortName: "元道化学",
+  shortName: "元道分子",
   enName: "Jiangxi Yuandao Molecular Chemistry Co., Ltd.",
   address: "江西省九江市永修县云山经济开发区星火工业园",
   phone: "181-7926-7699",
@@ -68,7 +68,7 @@ export const MILESTONES = [
   {
     year: "2024",
     title: "创新中心",
-    desc: "元道化学上海研发中心落成，专注于特种环氧单体的深度开发。",
+    desc: "元道分子江西研发中心落成，专注于特种环氧单体的深度开发。",
   },
 ];
 

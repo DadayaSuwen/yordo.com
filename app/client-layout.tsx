@@ -7,7 +7,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS, COMPANY_DATA } from "@/app/data/constants";
 
-export default function ClientLayout({ children }: { children: React.ReactNode }) {
+export default function ClientLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -39,7 +43,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             >
               <Image
                 src="/yordo.jpg"
-                alt="元道化学"
+                alt="元道分子"
                 width={40}
                 height={40}
                 className="w-full h-full object-cover"
@@ -51,7 +55,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
                   scrolled ? "text-blue-900" : "text-white"
                 }`}
               >
-                元道化学
+                元道分子
               </div>
               <div
                 className={`text-xs uppercase tracking-wider transition-colors ${
@@ -139,10 +143,16 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         <div className="container mx-auto px-4 grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold">
-                Y
+              <div className="w-8 h-8 rounded-lg overflow-hidden">
+                <Image
+                  src="/yordo.jpg"
+                  alt="元道分子"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <span className="text-white font-bold text-xl">元道化学</span>
+              <span className="text-white font-bold text-xl">元道分子</span>
             </div>
             <p className="text-sm leading-relaxed mb-6">
               以分子科技为核心，致力于精细化学品的绿色合成与应用创新。
@@ -233,9 +243,14 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             <span className="cursor-pointer hover:text-slate-400">
               服务条款
             </span>
-            <span className="cursor-pointer hover:text-slate-400">
-              赣ICP备XXXXXXXX号
-            </span>
+            <a
+              href="https://beian.miit.gov.cn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-400"
+            >
+              赣ICP备2020014627号-1
+            </a>
           </div>
         </div>
       </footer>
